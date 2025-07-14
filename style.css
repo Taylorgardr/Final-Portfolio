@@ -1,0 +1,131 @@
+/* Base styles */
+body {
+  background-color: #00141F;
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  padding-left: 300px; /* Reserve space for fixed sidebar */
+  color: #EBF8FF;
+}
+
+/* Sidebar for large screens */
+.name-contact {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 280px;
+  height: 100vh;
+  color: #EBF8FF;
+  padding: 2%;
+  overflow-y: auto;
+}
+
+/* Main content container */
+.main-content {
+  margin-left: 0;
+  margin-right: 0;
+  padding: 2%;
+}
+
+/* Text styles */
+h1,
+p {
+  margin-left: 1%;
+  margin-right: 1%;
+}
+
+.about {
+ color: #EBF8FF;
+  padding: 1% 1%;
+  margin-top: 2rem 0%;
+ 
+}
+
+.projects {
+  color: #EBF8FF;
+  padding: 1% 1%;
+  margin: 2rem 0%;
+
+  margin-top: 2rem;
+}
+
+/* Icons */
+.github-icon,
+.email-icon {
+  width: 35px;
+  height: 35px;
+  padding-bottom: 1%;
+}
+
+.github-icon:hover,
+.email-icon:hover {
+  transform: scale(1.1);
+  transition: transform 0.2s ease;
+}
+iframe {
+  border: 1px solid black;
+  width: 100%; /* takes precedence over the width set with the HTML width attribute */
+}
+
+.project-row {
+  display: flex;
+  align-items: flex-start;
+  margin: 2rem 0%;
+  gap: 2rem;
+  flex-wrap: wrap; /* ensures it doesn't break on small screens */
+}
+
+.project-preview img {
+ width: 300px;
+  height: 200px;
+  border: 2px solid #a2d2ff;
+  border-radius: 8px;
+  transition: transform 0.2s ease;
+}
+
+.project-preview img:hover {
+  transform: scale(1.03);
+}
+
+.project-description {
+  flex: 1;
+  color: #EBF8FF;
+}
+
+.project-description h3 {
+  margin-top: 0;
+  color: #a2d2ff;
+}
+
+.project-description p {
+  margin-top: 0.5rem;
+  color: #cceaff;
+}
+
+
+/* 🔄 Responsive override for small screens */
+@media (max-width: 768px) {
+  .name-contact {
+    position: static;
+    width: 100%;
+    height: auto;
+    padding: 2% 1%;
+  }
+@media (max-width: 768px) {
+  .project-row {
+    flex-direction: column;
+  }
+
+  .project-preview img {
+    max-width: 100%;
+  }
+}
+  body {
+    padding-left: 0;
+  }
+
+  .main-content {
+    padding: 2% 1%;
+  }
+}
